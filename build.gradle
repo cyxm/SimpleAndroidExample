@@ -1,27 +1,30 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+//build脚本工具
 buildscript {
     repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
         google()
-        jcenter()
-        
     }
+
     dependencies {
         classpath 'com.android.tools.build:gradle:3.5.3'
-        
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
     }
 }
 
+//所有工程通用配置
 allprojects {
+    //仓库路径配置
     repositories {
+        maven {
+            url 'http://maven.aliyun.com/nexus/content/groups/public'
+        }
+        maven {
+            url "https://jitpack.io"
+        }
+        jcenter {
+            url 'http://jcenter.bintray.com/'
+        }
         google()
-        jcenter()
-        
     }
-}
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
 }
