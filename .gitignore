@@ -2,7 +2,10 @@
 /*
 #同步业务模块
 !/app
-!/moduleSdk
+!/gradle_test_assign_parent_dir
+!/gradle_test_batch_assign_dir
+!/gradle_test_nest_project_parent
+!/gradle_test_single_project
 
 ##同步工程配置信息
 !.gitignore
