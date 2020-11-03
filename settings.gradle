@@ -10,22 +10,22 @@ println()
 printf("rootProject=%s", settings.rootProject)
 println()
 
-//导入单个工程
-settings.include(":gradle_test_single_project")
-
-//导入嵌套工程
-settings.include(":gradle_test_nest_project_parent:gradle_nest_project_child")
-
-//指定工程路径
-settings.include(":gradle_test_assign_dir")
-settings.project(":gradle_test_assign_dir").projectDir = file("/gradle_test_assign_parent_dir/gradle_test_assign_dir")
-
-//批量指定工程路径
-file('/gradle_test_batch_assign_dir').eachDir {
-    dir ->
-        settings.include(dir.name)
-        settings.project(":${dir.name}").projectDir = dir
-}
+////导入单个工程
+//settings.include(":gradle_test_single_project")
+//
+////导入嵌套工程
+//settings.include(":gradle_test_nest_project_parent:gradle_nest_project_child")
+//
+////指定工程路径
+//settings.include(":gradle_test_assign_dir")
+//settings.project(":gradle_test_assign_dir").projectDir = file("/gradle_test_assign_parent_dir/gradle_test_assign_dir")
+//
+////批量指定工程路径
+//file('/gradle_test_batch_assign_dir').eachDir {
+//    dir ->
+//        settings.include(dir.name)
+//        settings.project(":${dir.name}").projectDir = dir
+//}
 
 //
 settings.include(":app")
